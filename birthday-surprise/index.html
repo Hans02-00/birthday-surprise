@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff5f7">
+  <meta name="description" content="A little birthday surprise made with love for Halimatun.">
+
+  <title>Happy Birthday, Halimatun ♡</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  
+<!-- Birthday Surprise Entry Gate -->
+<div id="entryGate" class="entry-gate">
+  <div class="entry-card">
+    <div class="entry-bow">🎀</div>
+    <p class="eyebrow">a little surprise awaits</p>
+
+    <h1 class="entry-title">
+      Before we begin...
+    </h1>
+
+    <p class="entry-message">
+      Someone special made something just for you. ♡
+    </p>
+
+    <button id="whoAreYouBtn" class="primary" type="button">
+      Who are you? ♡
+    </button>
+
+    <form id="visitorForm" class="visitor-form" hidden>
+      <label for="visitorName">Tell me your name first ✨</label>
+
+      <input
+        id="visitorName"
+        type="text"
+        placeholder="Enter your name..."
+        autocomplete="given-name"
+        maxlength="40"
+        required
+      >
+
+      <button class="primary" type="submit">
+        Enter the surprise ♡
+      </button>
+    </form>
+
+    <p class="entry-footer">made with love, just for you 💌</p>
+  </div>
+</div>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div id="sparkles" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#welcome" aria-label="Birthday surprise home">
+      <span class="brand-mark">♡</span> a little love note
+    </a>
+
+    <button id="musicBtn" class="music" type="button" aria-pressed="false">
+      <span aria-hidden="true">♫</span>
+      <span id="musicLabel">Play music</span>
+    </button>
+  </header>
+
+  <main>
+    <div class="progress" aria-label="Surprise progress">
+      <span class="progress-dot current" data-step="welcome"></span>
+      <span class="progress-line"></span>
+      <span class="progress-dot" data-step="gift"></span>
+      <span class="progress-line"></span>
+      <span class="progress-dot" data-step="letter"></span>
+      <span class="progress-line"></span>
+      <span class="progress-dot" data-step="gallery"></span>
+      <span class="progress-line"></span>
+      <span class="progress-dot" data-step="final"></span>
+    </div>
+
+    <!-- WELCOME -->
+    <section id="welcome" class="panel active" aria-labelledby="welcomeTitle">
+      <div class="hero-art" aria-hidden="true">
+        <span class="hero-star star-a">✦</span>
+        <span class="hero-star star-b">✧</span>
+        <span class="hero-heart">♡</span>
+        <span class="hero-bow">🎀</span>
+      </div>
+
+      <p class="eyebrow">a tiny website, a whole lot of love</p>
+
+      <h1 id="welcomeTitle" tabindex="-1">
+        Happy Birthday,<br>
+        <span data-name>Halimatun</span><span class="pink-dot">.</span>
+      </h1>
+
+      <p class="intro-copy">
+        I made a little something just for you. Aku ada janji kan kat kau ....
+        jadinya aku tunaikan....btw jangan lupe tekan play music dulu ye
+      </p>
+
+      <button class="primary" id="startBtn" type="button">
+        Open your surprise <span aria-hidden="true">♡</span>
+      </button>
+
+      <p class="tiny-note">made especially for you · seikhlas hatiiiii</p>
+    </section>
+
+    <!-- GIFT -->
+    <section id="gift" class="panel" aria-labelledby="giftTitle" hidden>
+      <div class="section-icon" aria-hidden="true">✉</div>
+
+      <p class="eyebrow">something special is waiting</p>
+      <h2 id="giftTitle" tabindex="-1">A little letter for you</h2>
+
+      <p>Sila tekan yeeeee</p>
+
+      <button class="envelope-wrap" id="envelopeBtn" type="button"
+        aria-label="Open birthday letter">
+        <span class="envelope">
+          <span class="envelope-back"></span>
+          <span class="letter-peek">For you, with love ♡</span>
+          <span class="envelope-front"></span>
+          <span class="flap"></span>
+          <span class="envelope-heart">♥</span>
+        </span>
+      </button>
+
+      <p class="hint">sekian dari saya seikhlas hati hehehehehe</p>
+    </section>
+
+    <!-- BIRTHDAY LETTER -->
+    <section id="letter" class="panel" aria-labelledby="letterTitle" hidden>
+      <p class="eyebrow">a note from my heart</p>
+
+      <article class="letter-paper">
+        <div class="paper-flower" aria-hidden="true">✿</div>
+
+        <h2 id="letterTitle" tabindex="-1">
+          Dear <span data-name>Halimatun</span>,
+        </h2>
+
+        <p id="personalMessage">[PERSONAL MESSAGE]</p>
+
+        <p class="signature">
+          With all my love,<br>
+          <span data-signature>Limah</span> ♡
+        </p>
+      </article>
+
+      <button class="primary" id="galleryBtn" type="button">
+        Tekan2 jgn tak tekan <span aria-hidden="true">→</span>
+      </button>
+    </section>
+
+    <!-- MEMORY GALLERY -->
+    <section id="gallery" class="panel panel-wide" aria-labelledby="galleryTitle" hidden>
+      <p class="eyebrow">little moments, big memories</p>
+
+      <h2 id="galleryTitle" tabindex="-1">
+        Our memory lane <span class="title-sparkle">✧</span>
+      </h2>
+
+      <p>Sebenarnya tak tahu nak letak gambar apa .... just ini je la erk ♡</p>
+
+      <!-- Only ONE memory-layout wrapper -->
+      <div class="memory-layout">
+        <div id="videoGrid" class="video-grid"></div>
+        <div id="photoGrid" class="photo-grid"></div>
+      </div>
+
+      <p class="gallery-note">
+        from Form 1 sampai degree — and hopefully for many more years ♡
+      </p>
+
+      <button class="primary" id="finalBtn" type="button">
+        One last thing… <span aria-hidden="true">✦</span>
+      </button>
+    </section>
+
+    <!-- FINAL SURPRISE -->
+    <section id="final" class="panel" aria-labelledby="finalTitle" hidden>
+      <div class="final-illustration" aria-hidden="true">
+        <span class="cake">🎂</span>
+        <span class="orbit orbit-one">♡</span>
+        <span class="orbit orbit-two">✦</span>
+      </div>
+
+      <p class="eyebrow">Last but not least, HAPPY BIRTHDAY HALIMATUN</p>
+
+      <h2 id="finalTitle" tabindex="-1">
+        The world is softer and brighter with you in it.
+      </h2>
+
+      <p>
+        Aku harap tahun ni dan akan datang kita akan terus bersama
+        dan jangan berubah ye Halimatun
+      </p>
+
+      <h3>Happy Birthday, <span data-name>Halimatun</span>! ♡</h3>
+
+      <button class="primary" id="replayBtn" type="button">
+        Relive the magic <span aria-hidden="true">↻</span>
+      </button>
+
+      <p class="tiny-note">
+        you are loved more than you know, i really mean that
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>made with</span>
+    <span class="footer-heart">♥</span>
+    <span>to you</span>
+  </footer>
+
+  <!-- OPTIONAL BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="./assets/music/birthday-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- CONFETTI -->
+  <div id="confetti" aria-hidden="true"></div>
+
+  <!-- PHOTO MODAL -->
+  <div id="photoModal" class="photo-modal" hidden
+    role="dialog" aria-modal="true" aria-label="Memory photo">
+
+    <button id="closeModal" class="modal-close" type="button"
+      aria-label="Close photo">×</button>
+
+    <img id="modalImage" alt="Expanded memory">
+    <p id="modalCaption"></p>
+  </div>
+</body>
+</html>
